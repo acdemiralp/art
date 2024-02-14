@@ -35,6 +35,9 @@ if   (BUILD_TESTS)
   list        (APPEND PROJECT_LIBRARIES doctest::doctest)
 endif()
 
+find_package  (Eigen3 REQUIRED NO_MODULE)
+list          (APPEND PROJECT_LIBRARIES Eigen3::Eigen)
+
 ##################################################    Targets     ##################################################
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE 

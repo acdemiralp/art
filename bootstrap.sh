@@ -7,7 +7,7 @@ cd vcpkg
 if [ ! -f "vcpkg" ] ; then ./bootstrap-vcpkg.sh ; fi
 
 VCPKG_DEFAULT_TRIPLET=x64-linux
-./vcpkg install --recurse doctest
+./vcpkg install --recurse doctest eigen3
 cd ..
 
 cmake -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake ..
