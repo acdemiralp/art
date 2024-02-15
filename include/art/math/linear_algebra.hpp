@@ -33,7 +33,7 @@ using tensor222  = tensor<Eigen::Sizes<2, 2, 2>>;
 using tensor333  = tensor<Eigen::Sizes<3, 3, 3>>;
 using tensor444  = tensor<Eigen::Sizes<4, 4, 4>>;
 
-template <std::int32_t size>
+template <std::int32_t size> // Bad practice: Eigen uses 32 bit integers for size.
 using aabb       = Eigen::AlignedBox<scalar, size>;
 using aabb2      = aabb<2>;
 using aabb3      = aabb<3>;
